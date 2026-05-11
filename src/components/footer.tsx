@@ -69,7 +69,7 @@ function Footer() {
 
       <div className="my-10 rounded-full h-2.5 w-full bg-neutral-900 border-2 border-black shadow" />
 
-      <div className="w-full flex justify-between items-center text-sm">
+      <div className="w-full flex justify-between items-center text-sm text-neutral-400">
         <p>@ 2022 Epsilon Inc. All rights reserved. - Privacy Policy - Terms of Service</p>
         <p>Supported by Microsoft Startup</p>
       </div>
