@@ -8,7 +8,7 @@ import Footer from './components/footer'
 
 function App() {
   return (
-    <>
+    <div className='min-h-screen'>
       <Header />
       <Hero />
       <Companies />
@@ -16,7 +16,7 @@ function App() {
       <Product />
       <FAQs />
       <Footer />
-    </>
+    </div>
   )
 }
 
