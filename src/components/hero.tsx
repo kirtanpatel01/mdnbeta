@@ -10,10 +10,10 @@ import {
 
 function Hero() {
   return (
-    <div className="container mx-auto py-16 flex justify-between">
-      <div className="space-y-32">
+    <div className="container mx-auto py-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-0 px-4 lg:px-0">
+      <div className="space-y-16 lg:space-y-32">
         <div className="space-y-8">
-          <h1 className="flex flex-col gap-1 text-8xl font-semibold">
+          <h1 className="flex flex-col gap-1 text-5xl md:text-7xl lg:text-8xl font-semibold">
             <span>Schedule Better.</span>
             <span>Create Faster.</span>
           </h1>
@@ -75,7 +75,7 @@ function Hero() {
           </div>
 
           {/* Chart */}
-          <div className="absolute top-16 -right-30 max-w-36 p-3 rounded-lg shadow shadow-blue-400/20 bg-white">
+          <div className="hidden lg:block absolute top-16 -right-30 max-w-36 p-3 rounded-lg shadow shadow-blue-400/20 bg-white">
             <svg viewBox="0 0 100 40" className="w-full h-16">
               <defs>
                 <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
@@ -99,15 +99,15 @@ function Hero() {
           </div>
 
           {/* Social Media Bar */}
-          <div className="w-fit absolute bottom-12 -left-16 p-3 rounded-lg shadow-md shadow-blue-400/20 flex flex-col items-center gap-3 bg-white">
+          <div className="w-fit hidden lg:block absolute bottom-12 -left-16 p-3 rounded-lg shadow-md shadow-blue-400/20 flex flex-col items-center gap-3 bg-white">
             <IconBrandInstagram size={24} className="text-pink-500" />
             <IconBrandFacebook size={24} className="text-blue-600" />
             <IconBrandBehance size={22} className="text-sky-500" />
           </div>
         </div>
 
-        <div className="flex items-start justify-center gap-4">
-          <div className="w-fit p-4 rounded-lg shadow shadow-blue-400/30 flex items-center gap-3 bg-white">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 flex items-center gap-3 bg-white">
             <div className="size-12 rounded-full border-2 border-green-400 bg-indigo-400" />
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold">Followers Gain</h3>
@@ -119,7 +119,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="w-full max-w-60 p-4 rounded-lg shadow shadow-blue-400/30 space-y-2 bg-white">
+          <div className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 space-y-2 bg-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <IconFlag2Filled size={32} className="bg-purple-200 text-purple-400 rounded-md p-2" />

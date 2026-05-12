@@ -20,8 +20,8 @@ function Header() {
           </h1>
         </div>
 
-        <nav className="transition-all duration-300 flex items-center gap-16">
-          <ul className="flex items-center gap-8">
+        <nav className="transition-all duration-300 flex items-center gap-4 md:gap-16">
+          <ul className="hidden md:flex items-center gap-4 lg:gap-8">
             {links.map((link, index) => (
               <li key={index} className="font-semibold hover:text-blue-600 hover:underline underline-offset-2 decoration-blue-500">
                 <a href={link.href}>{link.title}</a>

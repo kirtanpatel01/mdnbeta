@@ -2,7 +2,7 @@ import { IconArrowRight, IconChevronUp, IconFlagFilled } from '@tabler/icons-rea
 
 function ExploreFeatures() {
   return (
-    <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center py-16'>
+    <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center py-16 px-4 lg:px-0'>
       {/* Left Content */}
       <div className='space-y-6'>
         <h1 className='text-white text-5xl md:text-6xl font-bold leading-tight'>
@@ -17,12 +17,12 @@ function ExploreFeatures() {
       </div>
 
       {/* Right Content (Cards) */}
-      <div className='relative flex justify-center md:justify-end mr-12'>
+      <div className='relative flex justify-center md:justify-end mr-0 md:mr-12'>
         {/* Background Card */}
-        <div className='bg-[#eef1f4] w-[340px] h-[280px] rounded-2xl relative p-6 flex flex-col justify-end gap-3 shadow-inner'>
+        <div className='bg-[#eef1f4] w-full max-w-[340px] h-[280px] rounded-2xl relative p-6 flex flex-col justify-end gap-3 shadow-inner'>
 
           {/* Top Overlapping Card */}
-          <div className='absolute -top-12 -right-6 md:-right-10 bg-white text-black p-6 rounded-xl shadow-2xl w-[300px] space-y-4 border border-neutral-100'>
+          <div className='absolute -top-12 right-0 md:-right-10 bg-white text-black p-6 rounded-xl shadow-2xl w-[300px] space-y-4 border border-neutral-100'>
             <div className='flex justify-between items-center'>
               <div className='flex items-center gap-2'>
                 <div className='bg-violet-100 p-1.5 rounded-md'>

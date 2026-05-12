@@ -24,11 +24,11 @@ function FAQs() {
   ]
 
   return (
-    <div className='container mx-auto py-24'>
+    <div className='container mx-auto py-24 px-4 lg:px-0'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
         {/* Left Column */}
         <div className='space-y-6'>
-          <h1 className='text-5xl font-bold text-neutral-900 leading-tight'>
+          <h1 className='text-4xl md:text-5xl font-bold text-neutral-900 leading-tight'>
             Any questions?<br />We got you
           </h1>
           <p className='text-neutral-500 text-lg max-w-md leading-relaxed'>

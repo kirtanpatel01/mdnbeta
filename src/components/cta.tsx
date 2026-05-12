@@ -1,7 +1,7 @@
 function CTA() {
   return (
     <div className='container mx-auto flex flex-col items-center gap-8 py-16'>
-      <h1 className='text-4xl font-medium flex flex-col items-center gap-2'>
+      <h1 className='text-3xl md:text-4xl font-medium flex flex-col items-center gap-2'>
         <span>Join milions of</span>
         <span className="">creative people with MBA</span>
       </h1>

@@ -3,8 +3,8 @@ import React from 'react'
 
 function Features() {
   return (
-    <div className='container mx-auto flex justify-between items-start '>
-      <h1 className="flex flex-col gap-4 font-bold text-6xl ">
+    <div className='container mx-auto flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-0 px-4 lg:px-0'>
+      <h1 className="flex flex-col gap-4 font-bold text-4xl md:text-5xl lg:text-6xl ">
         <div className='tracking-tight font-black'>
           <span>MDN</span>
           <span className="bg-linear-to-r from-purple-900 to-blue-600 bg-clip-text text-transparent">Beta.</span>

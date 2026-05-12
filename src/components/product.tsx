@@ -2,12 +2,12 @@ import { IconArrowRight, IconCheck, IconChevronUp, IconHeartFilled, IconMoodSmil
 
 function Product() {
   return (
-    <div className='container mx-auto py-16 space-y-24 pr-14'>
+    <div className='container mx-auto py-16 space-y-24 px-4  lg:px-0'>
       {/* Top Section */}
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         {/* Left Column */}
         <div className='space-y-6'>
-          <h1 className='text-5xl font-bold text-neutral-900 leading-tight'>
+          <h1 className='text-4xl md:text-5xl font-bold text-neutral-900 leading-tight'>
             Real-time visual<br />on your growth
           </h1>
           <p className='text-neutral-500 text-lg max-w-lg'>
@@ -31,7 +31,7 @@ function Product() {
         </div>
 
         {/* Right Column (Mock Dashboard) */}
-        <div className='relative flex justify-center lg:justify-end'>
+        <div className='relative flex justify-center lg:justify-end lg:pr-14'>
           {/* Main Card Container */}
           <div className='bg-neutral-100 rounded-md p-4 w-full max-w-md space-y-4'>
             {/* Chart Card */}
@@ -77,7 +77,7 @@ function Product() {
                     </svg>
 
                     {/* Tooltip */}
-                    <div className='absolute top-8 -right-12  bg-neutral-900 text-white p-4 rounded-lg shadow-lg z-10'>
+                    <div className='absolute top-8 right-2 bg-neutral-900 text-white p-4 rounded-lg shadow-lg z-10'>
                       <p className='text-lg font-bold'>131 Followers</p>
                       <div className='flex items-center gap-0.5 bg-green-500/20 text-green-400 px-2 py-1 rounded-md mt-2 text-sm w-fit'>
                         <IconChevronUp size={10} strokeWidth={3} />
@@ -120,7 +120,7 @@ function Product() {
       </div>
 
       {/* Bottom Section (Stats Card) */}
-      <div className='bg-[#f4f7fa] rounded-3xl p-10 space-y-8'>
+      <div className='bg-[#f4f7fa] rounded-3xl p-6 md:p-10 space-y-8'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
           {[
             { value: "89%", label: "Users satisfied with our service and features on the MDN App" },

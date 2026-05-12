@@ -48,20 +48,20 @@ function Dashboard() {
   ]
 
   return (
-    <div className='container mx-auto bg-gray-100 h-[1001px] rounded-xl flex border border-indigo-100/50'>
-      <aside className='bg-gray-50 w-fit h-full p-1 rounded-l-xl'>
+    <div className='container mx-auto bg-gray-100 h-auto lg:h-[1001px] rounded-xl flex flex-col lg:flex-row border border-indigo-100/50'>
+      <aside className='bg-gray-50 w-full lg:w-fit h-auto lg:h-full p-2 lg:p-1 rounded-t-xl lg:rounded-l-xl'>
         <ul className='flex items-center gap-1'>
           {["bg-rose-500", "bg-yellow-500", "bg-green-500"].map((i) => (
             <li className={`size-3 rounded-full ${i}`} />
           ))}
         </ul>
 
-        <div className='relative h-full flex flex-col items-center py-2'>
+        <div className='relative h-full flex flex-row lg:flex-col items-center py-2 justify-between lg:justify-start w-full lg:w-fit gap-4 lg:gap-0'>
           <IconNut className='fill-black stroke-white size-10' />
 
-          <div className='w-8 bg-neutral-300 h-px mb-4 mt-2.5' />
+          <div className='hidden lg:block w-8 bg-neutral-300 h-px mb-4 mt-2.5' />
 
-          <ul className='flex flex-col gap-2'>
+          <ul className='flex flex-row lg:flex-col gap-2'>
             <IconHome className='p-1.5 rounded-md bg-neutral-200 size-8' />
             <IconStrokeCurved className='p-1.5 rounded-md size-8' />
             <IconPencil className='p-1.5 rounded-md size-8' />
@@ -69,14 +69,14 @@ function Dashboard() {
             <IconSettings className='p-1.5 rounded-md size-8' />
           </ul>
 
-          <div className='absolute bottom-4 space-y-2'>
+          <div className='relative lg:absolute lg:bottom-4 flex flex-row lg:flex-col space-x-2 lg:space-x-0 space-y-0 lg:space-y-2'>
             <IconSun className='p-1.5 rounded-md size-8' />
             <IconUserFilled className='bg-neutral-300 rounded-full p-2 size-8' />
           </div>
         </div>
       </aside>
       <main className='w-full h-full px-4 pt-10 space-y-6'>
-        <header className='flex items-center justify-between'>
+        <header className='flex flex-col md:flex-row items-center justify-between gap-4'>
           <div className='w-full max-w-md flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-200 '>
             <IconSearch size={16} className='text-gray-700' />
             <input placeholder='Search' className='bg-transparent focus:outline-none' />
@@ -105,7 +105,7 @@ function Dashboard() {
           <h1 className='text-3xl font-bold'>Overview</h1>
           <div className='flex gap-4'>
             <div className='flex-1 space-y-4'>
-              <div className='grid grid-cols-3 gap-4'>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {stats.map((i) => (
                   <div className='bg-white rounded-xl shadow-slate-400/30 p-4 space-y-3'>
                     <div className='flex items-center justify-between'>
@@ -204,17 +204,17 @@ function Dashboard() {
                 </div>
               </div>
 
-              <div className='grid grid-cols-3 gap-4'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {/* Recent Uploads */}
-                <div className='col-span-2 p-4 rounded-t-lg bg-white shadow-slate-400/30 pb-20'>
+                <div className='col-span-1 lg:col-span-2 p-4 rounded-t-lg bg-white shadow-slate-400/30 pb-20'>
                   <h2 className='text-xl font-bold'>Recent Uploads</h2>
-                  <div className='flex items-start justify-between mt-4'>
+                  <div className='flex flex-col md:flex-row items-start justify-between mt-4 gap-4'>
                     <div className='flex flex-col items-start gap-2'>
-                      <span className='text-sm text-gray-400'>Prouct</span>
-                      <div className='flex items-center gap-6'>
-                        <div className='rounded-xl size-32 bg-linear-to-tl from-rose-500 via-red-300 to-pink-600' />
-                        <div className='spacey-4'>
-                          <h1 className='max-w-80 text-4xl font-bold'>Scisors and other stuff</h1>
+                      <span className='text-sm text-gray-400'>Product</span>
+                      <div className='flex flex-col sm:flex-row items-start gap-4 sm:gap-6'>
+                        <div className='rounded-xl size-32 bg-linear-to-tl from-rose-500 via-red-300 to-pink-600 flex-shrink-0' />
+                        <div className='space-y-4'>
+                          <h1 className='max-w-80 text-2xl sm:text-4xl font-bold'>Scisors and other stuff</h1>
                           <div className='flex items-center gap-2 text-sm'>
                             <span className='text-gray-500'>Powered by</span>
                             <div className='size-4 rounded-full bg-linear-to-l from-amber-300 via-lime-400 to-violet-400' />

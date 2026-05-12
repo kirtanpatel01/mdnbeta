@@ -29,8 +29,8 @@ function Footer() {
     }
   ]
   return (
-    <footer className="container mx-auto py-12">
-      <div className="flex items-start justify-between">
+    <footer className="container mx-auto py-12 px-4 lg:px-0">
+      <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-0">
         {/* Left */}
         <div>
           {/* Logo */}
@@ -43,7 +43,7 @@ function Footer() {
           </div>
 
           {/* desc */}
-          <p className="text-sm w-96 mt-3 text-neutral-300">
+          <p className="text-sm w-full max-w-96 mt-3 text-neutral-300">
             Management De Nation or MDN is a poweful app for you to
             manage, create, or visuadze your product and growth
             throughout the easiest and smoothest way postible.
@@ -51,7 +51,7 @@ function Footer() {
         </div>
 
         {/* Right */}
-        <ul className="flex gap-10 ">
+        <ul className="flex flex-wrap gap-10 md:gap-16">
           {links.map(item => (
             <li key={item.heading} className="space-y-6">
               <h2 className="font-bold">{item.heading}</h2>
@@ -69,7 +69,7 @@ function Footer() {
 
       <div className="my-10 rounded-full h-2.5 w-full bg-neutral-900 border-2 border-black shadow" />
 
-      <div className="w-full flex justify-between items-center text-sm text-neutral-400">
+      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-sm text-neutral-400 text-center md:text-left">
         <p>@ 2022 Epsilon Inc. All rights reserved. - Privacy Policy - Terms of Service</p>
         <p>Supported by Microsoft Startup</p>
       </div>
