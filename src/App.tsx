@@ -6,14 +6,23 @@ import Product from './components/product'
 import FAQs from './components/faqs'
 import Footer from './components/footer'
 import CTA from './components/cta'
+import Dashboard from './components/dashboard'
+import ExploreFeatures from './components/explore-features'
 
 function App() {
   return (
     <div className=''>
       <Header />
       <Hero />
-      <Companies />
-      <Features />
+      <div className='w-full border-y border-neutral-200 my-16'>
+        <Companies />
+      </div>
+      <div className='space-y-16 relative pb-20'>
+        <div className='absolute inset-x-0 bottom-0 h-1/2 bg-black -z-10' />
+        <Features />
+        <Dashboard />
+        <ExploreFeatures />
+      </div>
       <Product />
       <FAQs />
       <div className=' bg-neutral-950 text-neutral-50'>

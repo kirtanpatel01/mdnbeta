@@ -8,8 +8,9 @@ function Header() {
     { title: "Patch", href: "/patch" },
     { title: "Career", href: "/career" },
   ]
+
   return (
-    <header className="w-full sticky top-0 px-3 py-2 border-b border-zinc-200">
+    <header className="w-full sticky top-0 px-3 py-2 border-b border-zinc-200 bg-white/80 backdrop-blur-md z-9999">
       <div className="container mx-auto flex justify-between items-center gap-4">
         <div className="flex items-center gap-1">
           <IconNut size={40} className="" />

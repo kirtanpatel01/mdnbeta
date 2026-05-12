@@ -1,8 +1,142 @@
-import React from 'react'
+import { 
+  IconArrowRight, 
+  IconBrandInstagram, 
+  IconBrandFacebook, 
+  IconBrandBehance, 
+  IconArrowUpRight, 
+  IconChevronUp, 
+  IconFlag2Filled 
+} from "@tabler/icons-react"
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <div className="container mx-auto py-16 flex justify-between">
+      <div className="space-y-32">
+        <div className="space-y-8">
+          <h1 className="flex flex-col gap-1 text-8xl font-semibold">
+            <span>Schedule Better.</span>
+            <span>Create Faster.</span>
+          </h1>
+          <p className="max-w-96">
+            Schedule your product selling, promotion, or gain
+            followers using tons of powerful templates and easy to
+            use tools in MDN App. Availbale for iOS and MacOS.
+          </p>
+          <button className="flex items-center gap-2 bg-neutral-950 rounded-md text-white px-4 py-2 cursor-pointer hover:bg-neutral-800 transition-colors">
+            <span>Join the waitlist</span>
+            <IconArrowRight size={16} />
+          </button>
+        </div>
+
+        <div className="space-y-2">
+          <div className="flex ml-1.5">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="size-8 rounded-full bg-neutral-400 -ml-2 border border-white shadow-md" />
+            ))}
+          </div>
+          <p className="text-neutral-700 text-sm max-w-80"><span className="text-black font-semibold">12,000+</span> people already join the waitist of MDN Beta App</p>
+        </div>
+      </div>
+
+      <div className="w-full max-w-3xl space-y-4">
+        <div className="relative mx-auto max-w-68 ">
+          <div className="p-4 rounded-xl shadow-sm shadow-blue-500/30 space-y-5 bg-white">
+            <div className="flex justify-between ">
+              <h3 className="font-bold text-sm">Recent Product</h3>
+              <button className="px-2 rounded-md py-1 shadow-md flex items-center gap-1">
+                <span className="text-xs">Live Preview </span>
+                <IconArrowUpRight size={12} />
+              </button>
+            </div>
+
+            <img src="pink_flower_pot.png" alt="Product Image" className="rounded-lg w-full " />
+
+            <div className="flex items-start justify-between">
+              <div className="space-y-2">
+                <h2>Pink Flower pot</h2>
+                <p className="text-xs text-neutral-400">Tuesday, 21 May 26 | 12:40 PM</p>
+
+                <div className="flex items-center gap-1 text-sm">
+                  <div className="rounded-full bg-linear-to-br from-purple-500 to-blue-700 size-4"></div>
+                  <span className="font-medium">Vivek Pal</span>
+                </div>
+              </div>
+
+              <div className="text-xs bg-green-100 text-green-500 px-2 py-1 rounded-md">
+                + 2.6%
+              </div>
+            </div>
+
+            <div className="w-full bg-slate-200 rounded h-px" />
+
+            <button className="w-full text-sm px-4 py-2 rounded-md bg-blue-500 text-white ">
+              See All Post
+            </button>
+          </div>
+
+          {/* Chart */}
+          <div className="absolute top-16 -right-30 max-w-36 p-3 rounded-lg shadow shadow-blue-400/20 bg-white">
+            <svg viewBox="0 0 100 40" className="w-full h-16">
+              <defs>
+                <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M 0 38 L 10 38 C 13 38, 14 29, 17 29 L 22 29 C 25 29, 28 15, 30 11 C 33 6, 37 26, 40 31 C 42 34, 44 22, 46 22 L 56 22 C 60 22, 66 6, 70 2 C 73 0, 80 15, 85 22 C 90 26, 95 29, 100 29 L 100 40 L 0 40 Z"
+                fill="url(#blueGradient)"
+              />
+              <path
+                d="M 0 38 L 10 38 C 13 38, 14 29, 17 29 L 22 29 C 25 29, 28 15, 30 11 C 33 6, 37 26, 40 31 C 42 34, 44 22, 46 22 L 56 22 C 60 22, 66 6, 70 2 C 73 0, 80 15, 85 22 C 90 26, 95 29, 100 29"
+                fill="none"
+                stroke="#2563eb"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+
+          {/* Social Media Bar */}
+          <div className="w-fit absolute bottom-12 -left-16 p-3 rounded-lg shadow-md shadow-blue-400/20 flex flex-col items-center gap-3 bg-white">
+            <IconBrandInstagram size={24} className="text-pink-500" />
+            <IconBrandFacebook size={24} className="text-blue-600" />
+            <IconBrandBehance size={22} className="text-sky-500" />
+          </div>
+        </div>
+
+        <div className="flex items-start justify-center gap-4">
+          <div className="w-fit p-4 rounded-lg shadow shadow-blue-400/30 flex items-center gap-3 bg-white">
+            <div className="size-12 rounded-full border-2 border-green-400 bg-indigo-400" />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-semibold">Followers Gain</h3>
+              <span className="text-xs text-neutral-500 ">from last 7 days</span>
+            </div>
+            <div className="px-1.5 py-1 flex items-center rounded-md bg-green-200 text-xs">
+              <IconChevronUp size={12} className="text-green-500" />
+              <span className="text-green-500">21.4%</span>
+            </div>
+          </div>
+
+          <div className="w-full max-w-60 p-4 rounded-lg shadow shadow-blue-400/30 space-y-2 bg-white">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <IconFlag2Filled size={32} className="bg-purple-200 text-purple-400 rounded-md p-2" />
+                <span>Reach</span>
+              </div>
+              <div className="px-1.5 py-1 rounded-md bg-green-200 flex items-center">
+                <IconChevronUp size={12} className="text-green-500" />
+                <span className="text-green-500 text-xs">8.4%</span>
+              </div>
+            </div>
+
+            <h1 className="text-2xl font-semibold ">103,450</h1>
+            <p className="text-xs text-neutral-600">From last 7 days</p>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
