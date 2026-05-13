@@ -1,5 +1,6 @@
 import { IconArrowRight, IconMinus, IconPlus } from '@tabler/icons-react'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 
 function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0) // First one open by default
@@ -28,21 +29,49 @@ function FAQs() {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
         {/* Left Column */}
         <div className='space-y-6'>
-          <h1 className='text-4xl md:text-5xl font-bold text-neutral-900 leading-tight'>
+          <motion.h1 
+            className='text-4xl md:text-5xl font-bold text-neutral-900 leading-tight'
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             Any questions?<br />We got you
-          </h1>
-          <p className='text-neutral-500 text-lg max-w-md leading-relaxed'>
+          </motion.h1>
+          
+          <motion.p 
+            className='text-neutral-500 text-lg max-w-md leading-relaxed'
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          >
             We always want to clear out our goals and vision, and by that we'll answer some of the general question peoples ask about MDN Platform.
-          </p>
-          <a href="#" className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-semibold'>
+          </motion.p>
+          
+          <motion.a 
+            href="#" 
+            className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-semibold'
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+          >
             More FAQs <IconArrowRight size={16} />
-          </a>
+          </motion.a>
         </div>
 
         {/* Right Column (Accordion) */}
         <div className='divide-y divide-neutral-200 border-t border-neutral-200'>
           {faqs.map((faq, index) => (
-            <div key={index} className='py-6'>
+            <motion.div 
+              key={index} 
+              className='py-6'
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
+            >
               <button
                 className='w-full flex justify-between items-center text-left focus:outline-none'
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -53,10 +82,20 @@ function FAQs() {
                 </span>
               </button>
               
-              <div className={`mt-2 text-neutral-600 leading-relaxed overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                {faq.answer}
-              </div>
-            </div>
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div 
+                    className='text-neutral-600 leading-relaxed overflow-hidden'
+                    initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                    animate={{ height: "auto", opacity: 1, marginTop: 8 }}
+                    exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    {faq.answer}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>

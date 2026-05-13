@@ -1,4 +1,5 @@
 import { IconNut } from "@tabler/icons-react"
+import { motion } from 'motion/react'
 
 function Footer() {
   const links = [
@@ -32,7 +33,12 @@ function Footer() {
     <footer className="container mx-auto py-12 px-4 lg:px-0">
       <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-0">
         {/* Left */}
-        <div>
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           {/* Logo */}
           <div className="flex items-center gap-1">
             <IconNut size={40} className="" />
@@ -44,35 +50,74 @@ function Footer() {
 
           {/* desc */}
           <p className="text-sm w-full max-w-96 mt-3 text-neutral-300">
-            Management De Nation or MDN is a poweful app for you to
-            manage, create, or visuadze your product and growth
-            throughout the easiest and smoothest way postible.
+            Management De Nation or MDN is a powerful app for you to
+            manage, create, or visualize your product and growth
+            throughout the easiest and smoothest way possible.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right */}
         <ul className="flex flex-wrap gap-10 md:gap-16">
-          {links.map(item => (
+          {links.map((item, idx) => (
             <li key={item.heading} className="space-y-6">
-              <h2 className="font-bold">{item.heading}</h2>
-              <ul className="text-sm text-neutral-300 space-y-4">
+              <motion.h2 
+                className="font-bold"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+              >
+                {item.heading}
+              </motion.h2>
+              <motion.ul 
+                className="text-sm text-neutral-300 space-y-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { staggerChildren: 0.08, delayChildren: idx * 0.1 + 0.2 }
+                  }
+                }}
+              >
                 {item.subHeading.map((subItem, index) => (
-                  <li key={index}>
-                    <a href={subItem.href}>{subItem.title}</a>
-                  </li>
+                  <motion.li 
+                    key={index}
+                    variants={{
+                      hidden: { y: 15, opacity: 0, scale: 0.95 },
+                      visible: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }
+                    }}
+                  >
+                    <a href={subItem.href} className="hover:text-white transition-colors inline-block">{subItem.title}</a>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="my-10 rounded-full h-2.5 w-full bg-neutral-900 border-2 border-black shadow" />
+      <motion.div 
+        className="my-10 rounded-full h-2.5 w-full bg-neutral-900 border-2 border-black shadow"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        style={{ originX: 0 }}
+      />
 
-      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-sm text-neutral-400 text-center md:text-left">
+      <motion.div 
+        className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-sm text-neutral-400 text-center md:text-left"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <p>@ 2022 Epsilon Inc. All rights reserved. - Privacy Policy - Terms of Service</p>
         <p>Supported by Microsoft Startup</p>
-      </div>
+      </motion.div>
     </footer>
   )
 }

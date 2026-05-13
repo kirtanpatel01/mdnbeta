@@ -1,46 +1,122 @@
-import { 
-  IconArrowRight, 
-  IconBrandInstagram, 
-  IconBrandFacebook, 
-  IconBrandBehance, 
-  IconArrowUpRight, 
-  IconChevronUp, 
-  IconFlag2Filled 
+import {
+  IconArrowRight,
+  IconBrandInstagram,
+  IconBrandFacebook,
+  IconBrandBehance,
+  IconArrowUpRight,
+  IconChevronUp,
+  IconFlag2Filled
 } from "@tabler/icons-react"
+import { motion } from "motion/react"
+
+const circles = [
+  {
+    id: 1,
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    transition: {
+      duration: 0.7,
+      ease: "easeOut" as const,
+      delay: 0.5
+    }
+  },
+  {
+    id: 2,
+    initial: { x: -24, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+    transition: {
+      duration: 0.7,
+      ease: "easeOut" as const,
+      delay: 1,
+      type: "spring" as const,
+      stiffness: 300,
+      damping: 30
+    }
+  },
+  {
+    id: 3,
+    initial: { x: -48, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+    transition: {
+      duration: 0.7,
+      ease: "easeOut" as const,
+      delay: 1.5,
+      type: "spring" as const,
+      stiffness: 300,
+      damping: 30
+    }
+  },
+];
 
 function Hero() {
   return (
     <div className="container mx-auto py-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-0 px-4 lg:px-0">
       <div className="space-y-16 lg:space-y-32">
-        <div className="space-y-8">
-          <h1 className="flex flex-col gap-1 text-5xl md:text-7xl lg:text-8xl font-semibold">
+        <motion.div
+          className="space-y-8"
+
+        >
+          <motion.h1
+            className="flex flex-col gap-1 text-5xl md:text-7xl lg:text-8xl font-semibold"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+          >
             <span>Schedule Better.</span>
             <span>Create Faster.</span>
-          </h1>
-          <p className="max-w-96">
+          </motion.h1>
+          <motion.p
+            className="max-w-96"
+            initial={{ opacity: 0, y: 45 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+          >
             Schedule your product selling, promotion, or gain
             followers using tons of powerful templates and easy to
             use tools in MDN App. Availbale for iOS and MacOS.
-          </p>
-          <button className="flex items-center gap-2 bg-neutral-950 rounded-md text-white px-4 py-2 cursor-pointer hover:bg-neutral-800 transition-colors">
+          </motion.p>
+          <motion.button
+            className="flex items-center gap-2 bg-neutral-950 rounded-md text-white px-4 py-2 cursor-pointer hover:bg-neutral-800 transition-colors"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
+          >
             <span>Join the waitlist</span>
             <IconArrowRight size={16} />
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         <div className="space-y-2">
           <div className="flex ml-1.5">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="size-8 rounded-full bg-neutral-400 -ml-2 border border-white shadow-md" />
+            {circles.map((circle) => (
+              <motion.div
+                key={circle.id}
+                className="size-8 rounded-full bg-neutral-400 -ml-2 border border-white shadow-md"
+                initial={circle.initial}
+                animate={circle.animate}
+                transition={circle.transition}
+              />
             ))}
           </div>
-          <p className="text-neutral-700 text-sm max-w-80"><span className="text-black font-semibold">12,000+</span> people already join the waitist of MDN Beta App</p>
+          <motion.p
+            className="text-neutral-700 text-sm max-w-80"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1.5 }}
+          >
+            <span className="text-black font-semibold">12,000+</span> people already join the waitist of MDN Beta App
+          </motion.p>
         </div>
       </div>
 
       <div className="w-full max-w-3xl space-y-4">
         <div className="relative mx-auto max-w-68 ">
-          <div className="p-4 rounded-xl shadow-sm shadow-blue-500/30 space-y-5 bg-white">
+          <motion.div 
+            className="p-4 rounded-xl shadow-sm shadow-blue-500/30 space-y-5 bg-white"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          >
             <div className="flex justify-between ">
               <h3 className="font-bold text-sm">Recent Product</h3>
               <button className="px-2 rounded-md py-1 shadow-md flex items-center gap-1">
@@ -72,11 +148,23 @@ function Hero() {
             <button className="w-full text-sm px-4 py-2 rounded-md bg-blue-500 text-white ">
               See All Post
             </button>
-          </div>
+          </motion.div>
 
           {/* Chart */}
-          <div className="hidden lg:block absolute top-16 -right-30 max-w-36 p-3 rounded-lg shadow shadow-blue-400/20 bg-white">
-            <svg viewBox="0 0 100 40" className="w-full h-16">
+          <motion.div 
+            className="hidden lg:block absolute top-16 -right-30 max-w-36 p-3 rounded-lg shadow shadow-blue-400/20 bg-white"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 1.0 }}
+          >
+            <motion.svg 
+              viewBox="0 0 100 40" 
+              className="w-full h-16"
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={{ scaleY: 1, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1.3 }}
+              style={{ originY: 1 }}
+            >
               <defs>
                 <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.5" />
@@ -95,19 +183,29 @@ function Hero() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
-          </div>
+            </motion.svg>
+          </motion.div>
 
           {/* Social Media Bar */}
-          <div className="w-fit hidden lg:block absolute bottom-12 -left-16 p-3 rounded-lg shadow-md shadow-blue-400/20 flex flex-col items-center gap-3 bg-white">
+          <motion.div 
+            className="w-fit hidden lg:flex absolute bottom-12 -left-16 p-3 rounded-lg shadow-md shadow-blue-400/20 flex-col items-center gap-3 bg-white"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          >
             <IconBrandInstagram size={24} className="text-pink-500" />
             <IconBrandFacebook size={24} className="text-blue-600" />
             <IconBrandBehance size={22} className="text-sky-500" />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-          <div className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 flex items-center gap-3 bg-white">
+        <div className="flex flex-col md:flex-row items-start justify-center gap-4">
+          <motion.div 
+            className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 flex items-center gap-3 bg-white"
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+          >
             <div className="size-12 rounded-full border-2 border-green-400 bg-indigo-400" />
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold">Followers Gain</h3>
@@ -117,9 +215,14 @@ function Hero() {
               <IconChevronUp size={12} className="text-green-500" />
               <span className="text-green-500">21.4%</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 space-y-2 bg-white">
+          <motion.div 
+            className="w-full max-w-xs p-4 rounded-lg shadow shadow-blue-400/30 space-y-2 bg-white"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <IconFlag2Filled size={32} className="bg-purple-200 text-purple-400 rounded-md p-2" />
@@ -133,7 +236,7 @@ function Hero() {
 
             <h1 className="text-2xl font-semibold ">103,450</h1>
             <p className="text-xs text-neutral-600">From last 7 days</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
