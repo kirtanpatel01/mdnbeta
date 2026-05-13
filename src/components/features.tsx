@@ -1,5 +1,4 @@
 import { IconArrowRight } from '@tabler/icons-react'
-import React from 'react'
 import { motion } from 'motion/react'
 
 function Features() {
@@ -12,8 +11,7 @@ function Features() {
         transition={{duration:0.5, ease:"easeOut", delay: 0.6}}
       >
         <div className='tracking-tight font-black'>
-          <span>MDN</span>
-          <span className="bg-linear-to-r from-purple-900 to-blue-600 bg-clip-text text-transparent">Beta.</span>
+          <span className="bg-linear-to-r from-amber-400 via-rose-500 to-purple-600 bg-clip-text text-transparent">Gridly</span>
         </div>
         <span>Visualize & Schedule</span>
         <span>Your Growth Better.</span>
@@ -26,9 +24,7 @@ function Features() {
           viewport={{ once: true }}
           transition={{duration:0.5, ease:"easeOut", delay: 0.7}}
         >
-          Schedule your product seling, promotion, or gain
-          followers using tons of powerful templates and easy to
-          use tools in MDN App. Avalbale for IOS and MacOS.
+          The AI-powered scheduler designed for busy Instagram creators. Plan your feed, automate your reels, and grow your audience effortlessly.
         </motion.p>
         <motion.button className='px-4 py-2 rounded-md bg-black text-white flex items-center gap-1'
           initial={{y: 50, opacity: 0}}

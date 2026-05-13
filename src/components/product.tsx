@@ -41,7 +41,7 @@ function Product() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            Real-time visual<br />on your growth
+            Real-time visuals<br />on your growth
           </motion.h1>
           
           <motion.p 
@@ -51,13 +51,13 @@ function Product() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            Streamline your workflows and automate manual tasks throughout contract lifecycle in a systematic, rule-based environment.
+            Track your follower growth, engagement rates, and top-performing content in one beautiful, easy-to-read dashboard.
           </motion.p>
           
           <ul className='space-y-3'>
             {[
-              "40+ Freemium social-media templates",
-              "Approved by social expert"
+              "AI-generated caption suggestions",
+              "Best time to post predictions"
             ].map((text, idx) => (
               <motion.li 
                 key={idx}
@@ -211,9 +211,9 @@ function Product() {
       <div className='bg-[#f4f7fa] rounded-3xl p-6 md:p-10 space-y-8'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
           {[
-            { value: "89", suffix: "%", label: "Users satisfied with our service and features on the MDN App" },
-            { value: "162", suffix: "+", label: "Hours of work saved, thanks to the amazing templates and workflow" },
-            { value: "37", suffix: "%", label: "Hours of work saved, thanks to the amazing templates and workflow" },
+            { value: "89", suffix: "%", label: "Creators who doubled their engagement using Gridly" },
+            { value: "162", suffix: "+", label: "Hours saved per month on content planning" },
+            { value: "37", suffix: "%", label: "Increase in follower growth on average" },
           ].map((stat, index) => (
             <motion.div 
               className='space-y-3' 

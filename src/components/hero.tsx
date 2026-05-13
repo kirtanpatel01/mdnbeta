@@ -50,7 +50,8 @@ const circles = [
 
 function Hero() {
   return (
-    <div className="container mx-auto py-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-0 px-4 lg:px-0">
+    <div className="w-full relative overflow-hidden bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[32px_32px]">
+      <div className="container mx-auto py-16 flex flex-col lg:flex-row justify-between gap-12 lg:gap-0 px-4 lg:px-0 relative z-10">
       <div className="space-y-16 lg:space-y-32">
         <motion.div
           className="space-y-8"
@@ -71,9 +72,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
           >
-            Schedule your product selling, promotion, or gain
-            followers using tons of powerful templates and easy to
-            use tools in MDN App. Availbale for iOS and MacOS.
+            The AI-powered scheduler designed for busy Instagram creators. Plan your feed, automate your reels, and grow your audience with intelligent insights.
           </motion.p>
           <motion.button
             className="flex items-center gap-2 bg-neutral-950 rounded-md text-white px-4 py-2 cursor-pointer hover:bg-neutral-800 transition-colors"
@@ -104,7 +103,7 @@ function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 1.5 }}
           >
-            <span className="text-black font-semibold">12,000+</span> people already join the waitist of MDN Beta App
+            <span className="text-black font-semibold">12,000+</span> people already joined the waitlist for Gridly
           </motion.p>
         </div>
       </div>
@@ -239,6 +238,7 @@ function Hero() {
           </motion.div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

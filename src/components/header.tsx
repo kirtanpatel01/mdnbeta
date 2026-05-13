@@ -1,4 +1,4 @@
-import { IconChevronRight, IconNut } from "@tabler/icons-react"
+import { IconChevronRight, IconSparkles } from "@tabler/icons-react"
 import { motion } from "motion/react";
 
 const containerVariants = {
@@ -30,11 +30,10 @@ const itemVariants = {
 
 function Header() {
   const links = [
-    { title: "Use Cases", href: "/usecase" },
+    { title: "Features", href: "/features" },
     { title: "Templates", href: "/templates" },
-    { title: "Integrations", href: "/integrations" },
-    { title: "Patch", href: "/patch" },
-    { title: "Career", href: "/career" },
+    { title: "Pricing", href: "/pricing" },
+    { title: "Creator Blog", href: "/blog" },
   ]
 
   return (
@@ -46,10 +45,9 @@ function Header() {
         animate="visible"
       >
         <motion.div className="flex items-center gap-1" variants={itemVariants} custom={0}>
-          <IconNut size={40} className="" />
+          <IconSparkles size={32} className="text-amber-500 fill-amber-500" />
           <h1 className="font-black text-xl ">
-            <span>MDN</span>
-            <span className="bg-linear-to-r from-purple-900 to-blue-600 bg-clip-text text-transparent">Beta</span>
+            <span className="bg-linear-to-r from-amber-400 via-rose-500 to-purple-600 bg-clip-text text-transparent">Gridly</span>
           </h1>
         </motion.div>
 

@@ -39,7 +39,7 @@ function ExploreFeatures() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Reach nationwide<br />better and faster
+          Reach your audience<br />better and faster
         </motion.h1>
         
         <motion.p 
@@ -49,7 +49,7 @@ function ExploreFeatures() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
-          Streamline your workflows and automate manual tasks throughout contract lifecycle in a systematic, rule-based environment.
+          Let AI handle the heavy lifting. Automatically schedule your posts for peak engagement times and generate captions that convert.
         </motion.p>
         
         <motion.a 

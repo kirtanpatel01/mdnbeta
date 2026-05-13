@@ -9,11 +9,11 @@ import {
   IconMessage,
   IconMoneybag,
   IconMoodSmileFilled,
-  IconNut,
   IconPencil,
   IconSearch,
   IconSettings,
   IconShare,
+  IconSparkles,
   IconSun,
   IconUserFilled
 } from '@tabler/icons-react'
@@ -195,11 +195,11 @@ function RecentUploadsCard() {
       <h2 className='text-xl font-bold'>Recent Uploads</h2>
       <div className='flex flex-col md:flex-row items-start justify-between mt-4 gap-4'>
         <div className='flex flex-col items-start gap-2'>
-          <span className='text-sm text-gray-400'>Product</span>
+          <span className='text-sm text-gray-400'>Content</span>
           <div className='flex flex-col sm:flex-row items-start gap-4 sm:gap-6'>
-            <div className='rounded-xl size-32 bg-linear-to-tl from-rose-500 via-red-300 to-pink-600 shrink-0' />
+            <img src="/workspace_thumbnail.png" alt="Workspace" className='rounded-xl size-32 object-cover shrink-0' />
             <div className='space-y-4'>
-              <h1 className='max-w-80 text-2xl sm:text-4xl font-bold'>Scisors and other stuff</h1>
+              <h1 className='max-w-80 text-2xl sm:text-4xl font-bold'>Aesthetic Setup Reel</h1>
               <div className='flex items-center gap-2 text-sm'>
                 <span className='text-gray-500'>Powered by</span>
                 <div className='size-4 rounded-full bg-linear-to-l from-amber-300 via-lime-400 to-violet-400' />
@@ -267,10 +267,10 @@ function AccountCard() {
         </button>
       </div>
       <div className='flex flex-col items-center gap-4'>
-        <div className='bg-linear-to-bl from-sky-500 via-indigo-500 to-rose-500 size-24 rounded-full ring-2 ring-offset-1 ring-slate-200'></div>
+        <img src="/avatar_profile.png" alt="Profile" className='size-24 rounded-full ring-2 ring-offset-1 ring-slate-200 object-cover' />
         <div className='text-center'>
           <h2 className='font-bold text-xl'>@espilonwataki</h2>
-          <p className='text-sm text-gray-400'>Marketing Manager</p>
+          <p className='text-sm text-gray-400'>Instagram Creator</p>
         </div>
         <div className='w-full flex justify-evenly gap-4 bg-neutral-100 rounded-md py-4'>
           {[{ value: 302, title: "Posts" }, { value: 1000, title: "Followers" }, { value: 500, title: "Following" }].map(({ value, title }) => (
@@ -295,12 +295,12 @@ function UpcomingPostCard() {
       transition={{ duration: 0.4, ease: "easeOut", delay: 0.7 }}
     >
       <div className='font-bold'>Upcoming Post</div>
-      <img src="/pink_flower_pot.png" alt="Pink Flowe Pot" className='rounded-lg w-full aspect-square object-cover' />
+      <img src="/workspace_thumbnail.png" alt="Workspace" className='rounded-lg w-full aspect-square object-cover' />
       <div className='space-y-1'>
-        <h2 className='text-2xl font-bold'>Pink Flower Pot</h2>
+        <h2 className='text-2xl font-bold'>Aesthetic Workspace Reel</h2>
         <div className='text-sm text-gray-500'>Tuesday, January 28 | 01:31 PM</div>
         <div className='flex items-center gap-2'>
-          <div className='size-6 rounded-full bg-linear-to-tl from-teal-400 via-orange-500 to-rose-500' />
+          <img src="/avatar_author.png" alt="Author" className='size-6 rounded-full object-cover' />
           <span className='font-semibold'>Saloni Yappa</span>
         </div>
       </div>
@@ -349,7 +349,7 @@ function Dashboard() {
         </ul>
 
         <div className='relative h-full flex flex-row lg:flex-col items-center py-2 justify-between lg:justify-start w-full lg:w-fit gap-4 lg:gap-0'>
-          <IconNut className='fill-black stroke-white size-10' />
+          <IconSparkles className='text-amber-500 fill-amber-500 size-8' />
 
           <div className='hidden lg:block w-8 bg-neutral-300 h-px mb-4 mt-2.5' />
 

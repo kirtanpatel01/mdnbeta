@@ -7,8 +7,8 @@ function FAQs() {
 
   const faqs = [
     {
-      question: "What is MDN Beta?",
-      answer: "Management De Nation or MDN is a powerful app for you to manage, create, or visualize your product and growth throughout the easiest and smoothest way possible. By giving you a simple yet amazing experience with our App."
+      question: "What is Gridly?",
+      answer: "Gridly is an AI-powered scheduler designed specifically for busy Instagram creators. It helps you plan your feed, automate your reels, and grow your audience effortlessly."
     },
     {
       question: "Are there any additional fees?",
@@ -19,8 +19,8 @@ function FAQs() {
       answer: "You can download the app from our website or your device's app store."
     },
     {
-      question: "What features do MDN have and other not?",
-      answer: "MDN offers advanced real-time analytics, custom templates, and seamless workflow automation that other platforms lack."
+      question: "What features does Gridly have that others do not?",
+      answer: "Gridly offers AI-powered content scheduling, visual grid planning, and deep analytics tailored specifically for Instagram creators."
     }
   ]
 
@@ -46,7 +46,7 @@ function FAQs() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            We always want to clear out our goals and vision, and by that we'll answer some of the general question peoples ask about MDN Platform.
+            We want to be transparent about our vision, so we've answered some of the most common questions about Gridly.
           </motion.p>
           
           <motion.a 

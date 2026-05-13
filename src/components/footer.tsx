@@ -1,31 +1,31 @@
-import { IconNut } from "@tabler/icons-react"
+import { IconSparkles } from "@tabler/icons-react"
 import { motion } from 'motion/react'
 
 function Footer() {
   const links = [
     {
-      heading: "Others",
+      heading: "Product",
       subHeading: [
-        { title: "Use Cases", href: "/" },
-        { title: "Templates", href: "/" },
-        { title: "Integrations", href: "/" },
-        { title: "Patch Log", href: "/" },
+        { title: "Features", href: "/features" },
+        { title: "Templates", href: "/templates" },
+        { title: "Pricing", href: "/pricing" },
+        { title: "Integrations", href: "/integrations" },
       ],
     },
     {
-      heading: "Support",
+      heading: "Resources",
       subHeading: [
         { title: "FAQs", href: "/faqs" },
-        { title: "Support Center", href: "/contact" },
-        { title: "Helps", href: "/helps" }
+        { title: "Creator Blog", href: "/blog" },
+        { title: "Support Center", href: "/support" }
       ]
     },
     {
       heading: "Company",
       subHeading: [
-        { title: "Career", href: "/career" },
-        { title: "Story", href: "/story" },
-        { title: "Roadmap", href: "/roadmap" }
+        { title: "Our Story", href: "/story" },
+        { title: "Careers", href: "/career" },
+        { title: "Privacy Policy", href: "/privacy" }
       ]
     }
   ]
@@ -41,18 +41,15 @@ function Footer() {
         >
           {/* Logo */}
           <div className="flex items-center gap-1">
-            <IconNut size={40} className="" />
+            <IconSparkles size={32} className="text-amber-500 fill-amber-500" />
             <h1 className="font-black text-xl ">
-              <span>MDN</span>
-              <span className="bg-linear-to-r from-purple-900 to-blue-600 bg-clip-text text-transparent">Beta</span>
+              <span className="bg-linear-to-r from-amber-400 via-rose-500 to-purple-600 bg-clip-text text-transparent">Gridly</span>
             </h1>
           </div>
 
           {/* desc */}
           <p className="text-sm w-full max-w-96 mt-3 text-neutral-300">
-            Management De Nation or MDN is a powerful app for you to
-            manage, create, or visualize your product and growth
-            throughout the easiest and smoothest way possible.
+            The AI-powered scheduler designed for busy Instagram creators. Plan, schedule, and analyze your content effortlessly.
           </p>
         </motion.div>
 

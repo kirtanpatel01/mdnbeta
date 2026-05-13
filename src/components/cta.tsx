@@ -10,8 +10,8 @@ function CTA() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <span>Join millions of</span>
-        <span>creative people with MBA</span>
+        <span>Join thousands of</span>
+        <span>successful Instagram creators</span>
       </motion.h1>
       
       <motion.button 
